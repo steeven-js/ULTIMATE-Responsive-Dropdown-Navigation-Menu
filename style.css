@@ -161,17 +161,18 @@ header nav ul li a.active {
     /* #endregion Classe active Quand on click dessus*/
 
     header nav {
-         position: absolute;
-         width: 100%;
-         height: calc(100vh - 50px);
-         background: #333;
-         top: 50px;
-         left: 100%;
-         transition: 0.5s;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 50px;
+        left: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); /* transition plus sexy*/
     }
 
     header nav.active {
-        left: 0;
+        transform: translate(0);
     }
 
     header nav ul {
