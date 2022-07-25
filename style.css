@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(./Pexel-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #262626;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+}
+
+header nav ul li.sub-menu:before {
+    content: '\f107';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 50px;
+    color: #fff;
+    right: 5px; /*LOL*/
+}
+
+header nav ul li.active.sub-menu:before {
+    content: '\f106';
+}
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    background-color: #333;
+    display: none;
+}
+
+header nav ul li.active ul { /* NATANGAKI*/
+    display: block;
+}
+
+header nav ul li ul li {
+    display: block;
+    width: 200px;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #fff;
+    background: #2196f3;
+}
+
+.menu-toggle {
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+
+        position: fixed;
+        z-index: 10;
+        top: 0px;
+        right: 20px;
+        height: 50px;
+        width: 35px;
+        /* border-radius: 50%; */
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent; /* Création des lignes ensuite*/
+    }
+
+    /* #region line*/
+
+    .line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px; /* La ligne est crée épaisseur 2px*/
+        background: #f1f1f1;
+
+        /* Effet transition*/
+        transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+    }
+
+    .l1 { /* Ligne du haut*/
+        transform: translateY(-10px);
+    }
+
+    .l3 { /* Ligne du bas*/
+        transform: translateY(10px);
+    }
+
+    /* #endregion line*/
+
+    /* #region Classe active Quand on click dessus*/
+
+    /* Active = Au click*/
+
+    .l1.active {
+        transform: translateY(0px) rotate(135deg); /* Au click, il revient au début (0px) mais avec une rotation de (135deg)*/
+    }
+    
+    .l2.active  {
+        opacity: 0;
+    }
+    
+    .l3.active  {
+        transform: translateY(0px) rotate(-135deg); /* Au click, il revient au début (0px) mais avec une rotation de (-135deg)*/
+    }
+
+    /* #endregion Classe active Quand on click dessus*/
+
+    header nav {
+         position: absolute;
+         width: 100%;
+         height: calc(100vh - 50px);
+         background: #333;
+         top: 50px;
+         left: 100%;
+         transition: 0.5s;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block; /*Issou*/
+        text-align: center;
+    }
+
+    header nav ul a {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    header nav ul li.active ul {
+        position: relative;
+        background: #003e6f;
+    }
+
+    header nav ul li ul li {
+        width: 100%
+    }
+}
