@@ -98,6 +98,7 @@ header nav ul li a.active {
 @media (max-width: 991px) {
     header {
         padding: 0 20px;
+        overflow-x: hidden;
     }
 
     .menu-toggle {
