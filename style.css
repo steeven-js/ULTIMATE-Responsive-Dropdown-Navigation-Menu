@@ -170,7 +170,7 @@ header nav ul li a.active {
         transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); /* transition plus sexy*/
     }
 
-    header nav.active {
+    nav.active {
         transform: translate(0);
     }
 
