@@ -48,7 +48,8 @@ header nav ul li.sub-menu:before {
     position: absolute;
     line-height: 50px;
     color: #fff;
-    right: 5px; /*LOL*/
+    right: 5px;
+    /*LOL*/
 }
 
 header nav ul li.active.sub-menu:before {
@@ -62,7 +63,8 @@ header nav ul li ul {
     display: none;
 }
 
-header nav ul li.active ul { /* NATANGAKI*/
+header nav ul li.active ul {
+    /* NATANGAKI*/
     display: block;
 }
 
@@ -117,7 +119,8 @@ header nav ul li a.active {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: transparent; /* Création des lignes ensuite*/
+        background: transparent;
+        /* Création des lignes ensuite*/
     }
 
     /* #region line*/
@@ -126,18 +129,21 @@ header nav ul li a.active {
         position: absolute;
         display: block;
         width: 100%;
-        height: 2px; /* La ligne est crée épaisseur 2px*/
+        height: 2px;
+        /* La ligne est crée épaisseur 2px*/
         background: #f1f1f1;
 
         /* Effet transition*/
         transition: transform 0.3s ease-out, opacity 0.1s ease-out;
     }
 
-    .l1 { /* Ligne du haut*/
+    .l1 {
+        /* Ligne du haut*/
         transform: translateY(-10px);
     }
 
-    .l3 { /* Ligne du bas*/
+    .l3 {
+        /* Ligne du bas*/
         transform: translateY(10px);
     }
 
@@ -148,15 +154,17 @@ header nav ul li a.active {
     /* Active = Au click*/
 
     .l1.active {
-        transform: translateY(0px) rotate(135deg); /* Au click, il revient au début (0px) mais avec une rotation de (135deg)*/
+        transform: translateY(0px) rotate(135deg);
+        /* Au click, il revient au début (0px) mais avec une rotation de (135deg)*/
     }
-    
-    .l2.active  {
+
+    .l2.active {
         opacity: 0;
     }
-    
-    .l3.active  {
-        transform: translateY(0px) rotate(-135deg); /* Au click, il revient au début (0px) mais avec une rotation de (-135deg)*/
+
+    .l3.active {
+        transform: translateY(0px) rotate(-135deg);
+        /* Au click, il revient au début (0px) mais avec une rotation de (-135deg)*/
     }
 
     /* #endregion Classe active Quand on click dessus*/
@@ -168,21 +176,7 @@ header nav ul li a.active {
         background: #333;
         right: 0;
         transform: translateX(100%);
-        transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84); /* transition plus sexy*/
-
-        /* position: fixed;
-        width: 50vw;
-        min-height: 100vh;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: lightblue;
-        border-left: 1px solid #cfcfcf;
-        transform: translateX(100%);
-        transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);  */
-        /* transition plus sexy*/
+        transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
     }
 
     nav.active {
@@ -190,7 +184,8 @@ header nav ul li a.active {
     }
 
     header nav ul {
-        display: block; /*Issou*/
+        display: block;
+        /*Issou*/
         text-align: center;
     }
 
